@@ -1,0 +1,30 @@
+# ==============================================================================
+#                  Vault (Native Paper & Folia Architecture)
+# ==============================================================================
+
+# Enable checking for updates (legacy check disabled by default)
+update-check: false
+
+# Built-in Lightweight Economy Engine
+# Enabled by default so that plugins depending on Vault Economy (e.g. PremiumShop)
+# work out-of-the-box without requiring EssentialsX or other heavy plugins.
+# If a dedicated economy plugin is installed, its higher priority will supersede this.
+builtin-economy:
+  enabled: true
+  currency-symbol: "$"
+  currency-name-singular: "Dollar"
+  currency-name-plural: "Dollars"
+  starting-balance: 100.0
+  fractional-digits: 2
+  auto-create-accounts: true
+  save-interval-seconds: 60
+
+# Asynchronous Economy Conversion Settings (/vault-convert)
+conversion:
+  # Number of accounts to process per batch
+  batch-size: 100
+  # Delay (in ticks) between batches to maintain stable TPS/MSPT on large servers
+  batch-delay-ticks: 1
+
+# Log provider registrations and unregistrations to console
+log-service-changes: true

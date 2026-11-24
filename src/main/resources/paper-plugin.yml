@@ -1,0 +1,29 @@
+name: Vault
+version: 1.7.3-modern
+main: net.milkbowl.vault.Vault
+bootstrapper: net.milkbowl.vault.VaultBootstrap
+api-version: '1.21'
+folia-supported: true
+description: Modern native Paper and Folia 1:1 drop-in replacement for Vault with built-in economy.
+authors:
+  - cereal
+  - Sleaker
+  - mung3r
+  - Antigravity
+
+permissions:
+  vault.admin:
+    description: Allows administrative access to Vault diagnostics and conversion
+    default: op
+  vault.economy.balance:
+    description: Allows checking personal account balance
+    default: true
+  vault.economy.balance.others:
+    description: Allows checking other players' account balances
+    default: op
+  vault.economy.pay:
+    description: Allows transferring funds to other players
+    default: true
+  vault.economy.admin:
+    description: Allows administrative balance modifications (/eco)
+    default: op
